@@ -1,9 +1,12 @@
 import express from 'express'
+import dotenv from 'dotenv'
 import { connect } from './config/database.js'
 import movieRoutes from './routes/movieRoutes.js'
 import authRoutes from './routes/authRoutes.js'
 import ticketRoutes from './routes/ticketRoutes.js'
 import morgan from 'morgan'
+
+dotenv.config()
 
 const PORT = process.env.PORT || 3000
 

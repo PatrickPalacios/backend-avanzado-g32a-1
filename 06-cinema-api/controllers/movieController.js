@@ -1,4 +1,5 @@
-import Movie from '../models/movieModel.js' // Cambié a import
+import Movie from '../models/movieModel.js' // Para una exportación por defecto
+// Cambié a import
 
 // Controlador para crear una nueva película
 export const createMovie = async (req, res) => {
