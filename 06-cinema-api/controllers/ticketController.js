@@ -1,6 +1,6 @@
 import Ticket from '../models/ticketModel.js' // Cambié a import
 import Movie from '../models/movieModel.js' // Cambié a import
-import User from '../models/userModel.js' // Cambié a import
+// import User from '../models/userModel.js' // Cambié a import
 
 // Controlador para comprar boletos
 export const purchaseTicket = async (req, res) => {
