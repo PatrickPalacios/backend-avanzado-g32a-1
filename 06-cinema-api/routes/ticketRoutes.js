@@ -1,6 +1,6 @@
 import express from 'express' // Cambié a import
 import { purchaseTicket, getTicketHistory, getAllTickets } from '../controllers/ticketController.js' // Cambié a import
-import { protect } from '../middleware/authMiddleware.js' // Cambié a import
+import { protect } from '../middlewares/authMiddleware.js' // Cambié a import
 
 const router = express.Router()
 

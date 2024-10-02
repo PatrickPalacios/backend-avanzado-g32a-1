@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose' // Cambié a import
 
 const ticketSchema = new mongoose.Schema({
   customer: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
@@ -10,4 +10,4 @@ const ticketSchema = new mongoose.Schema({
 })
 
 const Ticket = mongoose.model('Ticket', ticketSchema)
-module.exports = Ticket
+export default Ticket // Cambié a exportación por defecto
