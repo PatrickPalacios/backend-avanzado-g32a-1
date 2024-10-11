@@ -5,6 +5,11 @@ import Movie from '../models/movieModel.js' // Cambié a import
 // Controlador para comprar boletos
 export const purchaseTicket = async (req, res) => {
   try {
+    // Solo los clientes pueden comprar boletos
+    if (req.user.role !== 'CUSTOMER') {
+      return res.status(403).json({ message: 'Solo los clientes pueden comprar boletos.' })
+    }
+
     const { movieId, quantity, price, totalValue, showTime, seats } = req.body
     const userId = req.user._id // Asegúrate de que `req.user` contiene el usuario autenticado
 
